@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarefas E-mail Marketing — Maio 2026 · Villa Veneza</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F8F5F0;
+  --surface: #FFFFFF;
+  --surface2: #F2EDE6;
+  --charcoal: #1A1714;
+  --dark: #2C2820;
+  --muted: #8A8078;
+  --border: #E4DDD4;
+  --border2: #D0C8BC;
+  --gold: #B08A40;
+  --gold-light: #F4E9D4;
+  --gold-pale: #FAF4EA;
+  --s1: #3A6647;
+  --s1-bg: #EAF2EC;
+  --s1-mid: #A5C9AE;
+  --s2: #285872;
+  --s2-bg: #E3EEF5;
+  --s2-mid: #8DBACF;
+  --s3a: #7A5220;
+  --s3a-bg: #F2E6D4;
+  --s3a-mid: #C4996A;
+  --s3b: #4E3478;
+  --s3b-bg: #ECE7F4;
+  --s3b-mid: #B0A0D0;
+  --s4: #782C26;
+  --s4-bg: #F2E4E2;
+  --s4-mid: #C9A09C;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--charcoal); -webkit-font-smoothing: antialiased; }
+
+/* ── HEADER ── */
+.hdr {
+  background: var(--dark);
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 24px rgba(0,0,0,.22);
+}
+.hdr-top {
+  padding: 1.4rem 2.5rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.brand-lock { display: flex; align-items: baseline; gap: 10px; }
+.brand-name { font-family: 'Lora', serif; font-style: italic; font-size: 1.45rem; color: var(--gold); letter-spacing: .02em; }
+.brand-sep { width: 1px; height: 17px; background: rgba(255,255,255,.18); margin: 0 2px; align-self: center; }
+.brand-doc { font-size: .75rem; font-weight: 300; color: rgba(255,255,255,.4); letter-spacing: .07em; text-transform: uppercase; }
+.hdr-meta { display: flex; align-items: center; gap: 7px; }
+.chip { font-size: .68rem; font-weight: 600; padding: 3px 11px; border-radius: 20px; letter-spacing: .05em; }
+.chip-gold { background: rgba(176,138,64,.15); color: var(--gold); border: 1px solid rgba(176,138,64,.25); }
+.chip-dim { background: rgba(255,255,255,.07); color: rgba(255,255,255,.45); border: 1px solid rgba(255,255,255,.1); }
+
+/* ── NAV ── */
+.nav { display: flex; padding: 0 2.5rem; overflow-x: auto; scrollbar-width: none; }
+.nav::-webkit-scrollbar { display: none; }
+.nav-btn {
+  padding: 9px 15px;
+  font-size: .73rem;
+  font-weight: 400;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.35);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all .18s;
+  white-space: nowrap;
+  font-family: 'Nunito', sans-serif;
+}
+.nav-btn:hover { color: rgba(255,255,255,.7); }
+.nav-btn.active { color: var(--gold); border-bottom-color: var(--gold); font-weight: 600; }
+
+/* ── LAYOUT ── */
+.main { max-width: 900px; margin: 0 auto; padding: 1.75rem 2rem 5rem; }
+.panel { display: none; animation: fi .2s ease; }
+.panel.active { display: block; }
+@keyframes fi { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ── UTILITIES ── */
+.intro-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--gold);
+  border-radius: 0 0 12px 12px;
+  padding: 1.4rem 1.7rem;
+  margin-bottom: 1.75rem;
+}
+.intro-title { font-family: 'Lora', serif; font-size: 1.5rem; font-weight: 500; color: var(--charcoal); margin-bottom: .45rem; line-height: 1.25; }
+.intro-body { font-size: .82rem; color: var(--muted); line-height: 1.75; }
+.intro-body strong { color: var(--dark); font-weight: 600; }
+
+.sec { display: flex; align-items: center; gap: 9px; margin: 1.85rem 0 .85rem; }
+.sec-bar { width: 4px; height: 20px; border-radius: 4px; flex-shrink: 0; }
+.sec-label { font-size: .67rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.badge { font-size: .62rem; font-weight: 700; padding: 2px 9px; border-radius: 20px; letter-spacing: .04em; }
+
+.notice {
+  background: var(--gold-pale);
+  border: 1px solid rgba(176,138,64,.2);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 8px 8px 0;
+  padding: .8rem 1.1rem;
+  font-size: .79rem;
+  color: var(--dark);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+.notice strong { color: var(--charcoal); font-weight: 600; }
+.notice.alert { background: #FEF3F2; border-left-color: #D94F3D; }
+.notice.alert strong { color: #A83228; }
+
+/* ── STATS ── */
+.stats { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; margin-bottom: 1.5rem; }
+.stat { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: .9rem 1rem; text-align: center; }
+.stat-v { font-family: 'Lora', serif; font-size: 1.8rem; color: var(--charcoal); line-height: 1; margin-bottom: .28rem; }
+.stat-l { font-size: .69rem; color: var(--muted); line-height: 1.4; }
+
+/* ── WEEK STRIP ── */
+.wstrip { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; margin-bottom: .85rem; overflow: hidden; }
+.wstrip-banner { display: flex; align-items: flex-start; gap: 11px; padding: 1rem 1.25rem; }
+.wstrip-line { width: 5px; min-height: 38px; border-radius: 4px; flex-shrink: 0; align-self: stretch; }
+.wstrip-title { font-family: 'Lora', serif; font-size: 1.05rem; font-weight: 500; color: var(--charcoal); margin-bottom: .18rem; }
+.wstrip-sub { font-size: .74rem; color: var(--muted); line-height: 1.5; }
+.wstrip-pills { display: flex; flex-wrap: wrap; gap: 5px; padding: 0 1.25rem .9rem 2.5rem; }
+.progress-bar { height: 3px; background: var(--border); }
+.progress-fill { height: 100%; background: linear-gradient(90deg, var(--gold), #D4AA60); transition: width .4s; }
+.progress-lbl { font-size: .67rem; color: var(--muted); padding: .45rem 1.25rem; display: flex; justify-content: space-between; }
+.progress-lbl span:last-child { font-weight: 700; color: var(--gold); }
+
+/* ── PILL TYPES ── */
+.pill { display: inline-block; font-size: .63rem; font-weight: 600; padding: 2px 9px; border-radius: 20px; letter-spacing: .03em; }
+.ps1 { background: var(--s1-bg); color: var(--s1); border: 1px solid var(--s1-mid); }
+.ps2 { background: var(--s2-bg); color: var(--s2); border: 1px solid var(--s2-mid); }
+.ps3a { background: var(--s3a-bg); color: var(--s3a); border: 1px solid var(--s3a-mid); }
+.ps3b { background: var(--s3b-bg); color: var(--s3b); border: 1px solid var(--s3b-mid); }
+.ps4 { background: var(--s4-bg); color: var(--s4); border: 1px solid var(--s4-mid); }
+.pgold { background: var(--gold-light); color: #7A5C20; border: 1px solid rgba(176,138,64,.3); }
+.pgray { background: #F0EDE8; color: #6A6258; border: 1px solid #D8D3CB; }
+.pred { background: #FEECEC; color: #B52C1E; border: 1px solid #F4BFBB; }
+
+/* ── EMAIL CARD ── */
+.email-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-bottom: .9rem;
+  overflow: hidden;
+  transition: box-shadow .18s, transform .18s;
+}
+.email-card:hover { box-shadow: 0 4px 22px rgba(0,0,0,.07); transform: translateY(-1px); }
+.email-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  user-select: none;
+}
+.email-check {
+  width: 20px; height: 20px;
+  border: 1.5px solid var(--border2);
+  border-radius: 6px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  cursor: pointer;
+  transition: all .15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+}
+.email-check:hover { border-color: var(--gold); }
+.email-check.checked { background: var(--gold); border-color: var(--gold); }
+.email-check.checked::after { content: '✓'; font-size: 11px; color: #fff; font-weight: 700; }
+.email-info { flex: 1; min-width: 0; }
+.email-meta { font-size: .67rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); margin-bottom: .2rem; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.email-title { font-size: .92rem; font-weight: 600; color: var(--charcoal); line-height: 1.35; margin-bottom: .4rem; }
+.email-pills { display: flex; gap: 5px; flex-wrap: wrap; }
+.email-arrow { font-size: 11px; color: var(--muted); flex-shrink: 0; margin-top: 4px; transition: transform .18s; }
+.email-arrow.open { transform: rotate(180deg); }
+
+.email-body { display: none; padding: 0 1.25rem 1.1rem 3.3rem; border-top: 1px solid var(--border); }
+.email-body.open { display: block; }
+
+.eb-grid { display: grid; gap: 10px; padding-top: .9rem; }
+.eb-item { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: .75rem 1rem; }
+.eb-label {
+  font-size: .64rem;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: .45rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.eb-icon { font-size: .85rem; }
+.eb-content { font-size: .8rem; color: var(--dark); line-height: 1.7; }
+.eb-content li { padding-left: .5rem; margin-left: .5rem; margin-bottom: .25rem; }
+.eb-content strong { color: var(--charcoal); font-weight: 600; }
+
+/* ── SUBJECT BLOCK ── */
+.subj-block { background: var(--surface); border: 1px solid var(--border); border-radius: 7px; padding: .6rem .9rem; margin-bottom: 6px; }
+.subj-label { font-size: .62rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: .3rem; }
+.subj-text { font-size: .82rem; color: var(--charcoal); line-height: 1.5; font-weight: 500; }
+.subj-pre { font-size: .74rem; color: var(--muted); margin-top: .2rem; font-style: italic; }
+
+/* ── COPY BLOCK ── */
+.copy-block {
+  background: #FAFAF7;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 6px 6px 0;
+  padding: .65rem .9rem;
+  font-size: .79rem;
+  font-style: italic;
+  color: var(--dark);
+  line-height: 1.65;
+  margin-top: .4rem;
+}
+
+/* ── TIME BADGE ── */
+.tbadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: .67rem;
+  font-weight: 700;
+  color: var(--gold);
+  background: var(--gold-light);
+  border: 1px solid rgba(176,138,64,.22);
+  border-radius: 5px;
+  padding: 2px 8px;
+  letter-spacing: .04em;
+}
+
+/* ── SEGMENT BLOCK ── */
+.seg-block {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: .6rem .9rem;
+  font-size: .78rem;
+  color: var(--dark);
+  line-height: 1.6;
+}
+.seg-block strong { color: var(--charcoal); font-weight: 600; }
+
+/* ── AB TABLE ── */
+.ab-table { width: 100%; border-collapse: collapse; font-size: .77rem; }
+.ab-table th { font-size: .64rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); padding: 6px 10px; background: var(--bg); border-bottom: 1px solid var(--border); text-align: left; }
+.ab-table td { padding: 7px 10px; border-bottom: 1px solid var(--border); color: var(--dark); vertical-align: top; line-height: 1.5; }
+.ab-table tr:last-child td { border-bottom: none; }
+.ab-var { display: inline-block; font-size: .63rem; font-weight: 700; width: 20px; height: 20px; border-radius: 50%; text-align: center; line-height: 20px; margin-right: 5px; flex-shrink: 0; }
+.va { background: #DDF0E5; color: #1D6B3A; }
+.vb { background: #DBE8F8; color: #1D4D8A; }
+
+/* ── CHECKLIST TABLE ── */
+.check-tbl { width: 100%; border-collapse: collapse; font-size: .78rem; margin-bottom: 1rem; }
+.check-tbl th { font-size: .64rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); padding: 7px 10px; background: var(--surface2); border-bottom: 1px solid var(--border); text-align: left; white-space: nowrap; }
+.check-tbl td { padding: 8px 10px; border-bottom: 1px solid var(--border); color: var(--dark); vertical-align: top; line-height: 1.55; }
+.check-tbl tr:last-child td { border-bottom: none; }
+.check-tbl tbody tr:hover td { background: #FAF7F2; }
+
+/* ── RULE CARDS ── */
+.rule-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.1rem 1.25rem; margin-bottom: .75rem; display: flex; gap: 12px; }
+.rule-num { font-family: 'Lora', serif; font-size: 1.75rem; color: var(--gold); line-height: 1; flex-shrink: 0; min-width: 26px; margin-top: 1px; }
+.rule-title { font-size: .86rem; font-weight: 700; color: var(--charcoal); margin-bottom: .28rem; }
+.rule-body { font-size: .77rem; color: var(--muted); line-height: 1.65; }
+.rule-body strong { color: var(--dark); font-weight: 600; }
+
+/* ── FOOTER ── */
+.footer { text-align: center; padding: 2rem; font-size: .71rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 2rem; }
+
+@media (max-width: 640px) {
+  .hdr-top { padding: 1.1rem 1.25rem; }
+  .nav { padding: 0 1.25rem; }
+  .main { padding: 1.2rem 1rem 4rem; }
+  .email-body { padding-left: 1.2rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="hdr">
+  <div class="hdr-top">
+    <div class="brand-lock">
+      <span class="brand-name">Villa Veneza</span>
+      <div class="brand-sep"></div>
+      <span class="brand-doc">E-mail Marketing — Maio 2026</span>
+    </div>
+    <div class="hdr-meta">
+      <span class="chip chip-gold">📧 12 Disparos</span>
+      <span class="chip chip-dim">Analista de E-mail</span>
+    </div>
+  </div>
+  <div class="nav">
+    <button class="nav-btn active" onclick="showTab('visao',this)">Visão Geral</button>
+    <button class="nav-btn" onclick="showTab('s1',this)">S1 · Dia das Mães</button>
+    <button class="nav-btn" onclick="showTab('s2',this)">S2 · Reativação</button>
+    <button class="nav-btn" onclick="showTab('s3a',this)">S3A · PIX Day</button>
+    <button class="nav-btn" onclick="showTab('s3b',this)">S3B · Kits Blusas</button>
+    <button class="nav-btn" onclick="showTab('s4',this)">S4 · Kits Calças</button>
+    <button class="nav-btn" onclick="showTab('regras',this)">Regras</button>
+  </div>
+</div>
+
+<div class="main">
+
+<!-- ═══════ VISÃO GERAL ═══════ -->
+<div id="panel-visao" class="panel active">
+
+  <div class="intro-card">
+    <div class="intro-title">Calendário de E-mail Marketing · Maio 2026</div>
+    <div class="intro-body">
+      Este documento detalha os <strong>12 disparos programados de maio</strong>, com segmentação, assuntos A/B, preheader, briefing de conteúdo e CTA de cada e-mail. Cada disparo tem uma tarefa específica — abra o card para ver o briefing completo. Marque como concluído após o agendamento na plataforma.
+    </div>
+  </div>
+
+  <div class="notice">
+    <strong>Plataforma:</strong> Edrone &nbsp;|&nbsp; <strong>Remetente:</strong> confirmar com o time antes do primeiro disparo de maio &nbsp;|&nbsp; <strong>Horário padrão:</strong> disparos matinais às 8h, disparos vespertinos às 19h &nbsp;|&nbsp; <strong>A/B obrigatório</strong> em todos os 12 disparos — usar as opções A e B fornecidas neste documento.
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="stat-v">12</div><div class="stat-l">Disparos no mês</div></div>
+    <div class="stat"><div class="stat-v">5</div><div class="stat-l">Semanas comerciais</div></div>
+    <div class="stat"><div class="stat-v">A/B</div><div class="stat-l">Obrigatório em todos</div></div>
+    <div class="stat"><div class="stat-v">6</div><div class="stat-l">Segmentos distintos</div></div>
+    <div class="stat"><div class="stat-v">8h</div><div class="stat-l">Disparo matinal padrão</div></div>
+    <div class="stat"><div class="stat-v">19h</div><div class="stat-l">Disparo vespertino</div></div>
+  </div>
+
+  <div class="sec"><div class="sec-bar" style="background:var(--gold)"></div><span class="sec-label">Calendário resumido — os 12 disparos</span></div>
+
+  <div style="overflow-x:auto;border-radius:10px;border:1px solid var(--border);margin-bottom:1.75rem">
+  <table class="check-tbl" style="min-width:620px">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Data / Hora</th>
+        <th>Segmento</th>
+        <th>Tipo</th>
+        <th>Assunto A</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>01</strong></td><td><span class="tbadge">01/05 · 8h</span></td><td>Base engajada</td><td><span class="pill ps1">Comercial</span></td><td>"Presente que ela vai usar todo dia — não só no domingo"</td><td><input type="checkbox" style="cursor:pointer"></td></tr>
+      <tr><td><strong>02</strong></td><td><span class="tbadge">05/05 · 19h</span></td><td>Não abriu e-mail 01</td><td><span class="pill ps1">Comercial</span></td><td>"Você viu o que tem de novo aqui?"</td><td><input type="checkbox" style="cursor:pointer"></td></tr>
+      <tr><td><strong>03</strong></td><td><span class="tbadge">06/05 · 8h</span></td><td>Sul e Sudeste</td><td><span class="pill ps1">Urgência</span></td><td>"Sedex grátis — pedido chega antes do domingo"</td><td><input type="checkbox" style="cursor:pointer"></td></tr>
+      <tr><td><strong>04</strong></td><td><span class="tbadge">09/05 · 8h</span></td><td>Não convertidos S1</td><td><span class="pill ps1">Last Call</span></td><td>"Última chance — meia-noite fecha o kit"</td><td><input type="checkbox" style="cursor:pointer"></td></tr>
+      <tr><td><strong>05</strong></td><td><span class="tbadge">11/05 · 19h</span></td><td>Inativos 60–180d</td><td><span class="pill ps2">Reativação</span></td><td>"A Villa sentiu sua falta 🌿"</td><td><input type="checkbox" style="cursor:pointer"></td></tr>
+      <tr><td><strong>06</strong></td><td><span class="tbadge">14/05 · 19h</span></td><td>Não abriu e-mail 05</td><td><span class="pill ps2">Reativação</span></td><td>"Frete grátis sem mínimo — só até amanhã"</td><td><input type="checkbox" style="cursor:pointer"></td></tr>
+      <tr><td><strong>07</strong></td><td><span class="tbadge">17/05 · 8h</span></td><td>Base ativa</td><td><span class="pill ps3a">Comercial</span></td><td>"Dia do PIX — condição exclusiva aberta"</td><td><input type="checkbox" style="cursor:pointer"></td></tr>
+      <tr><td><strong>08</strong></td><td><span class="tbadge">19/05 · 12h</span></td><td>Não convertidos S3A</td><td><span class="pill ps3a">Last Call</span></td><td>"Hoje é o último dia do PIX Day"</td><td><input type="checkbox" style="cursor:pointer"></td></tr>
+      <tr><td><strong>09</strong></td><td><span class="tbadge">22/05 · 9h</span></td><td>Base engajada + ativos</td><td><span class="pill ps3b">Lançamento</span></td><td>"Chegou uma novidade exclusiva Villa Veneza"</td><td><input type="checkbox" style="cursor:pointer"></td></tr>
+      <tr><td><strong>10</strong></td><td><span class="tbadge">24/05 · 19h</span></td><td>Abriu e-mail 09</td><td><span class="pill ps3b">Produto Foco</span></td><td>"Já escolheu o seu kit de blusa?"</td><td><input type="checkbox" style="cursor:pointer"></td></tr>
+      <tr><td><strong>11</strong></td><td><span class="tbadge">26/05 · 8h</span></td><td>Base engajada + compradores de calças</td><td><span class="pill ps4">Comercial</span></td><td>"Kit de calças com condição especial — kits curados"</td><td><input type="checkbox" style="cursor:pointer"></td></tr>
+      <tr><td><strong>12</strong></td><td><span class="tbadge">27/05 · 8h</span></td><td>Não convertidos S4</td><td><span class="pill ps4">Last Call</span></td><td>"Hoje é o último dia do kit com condição especial"</td><td><input type="checkbox" style="cursor:pointer"></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="sec"><div class="sec-bar" style="background:var(--gold)"></div><span class="sec-label">Resumo por semana</span></div>
+
+  <div class="wstrip">
+    <div class="wstrip-banner">
+      <div class="wstrip-line" style="background:var(--s1)"></div>
+      <div><div class="wstrip-title">Semana 1 · 01 a 09/05 · Dia das Mães</div><div class="wstrip-sub">4 disparos. Apresentação dos Kits, reforço para quem não abriu, SEDEX Grátis para Sul/Sudeste e last call.</div></div>
+    </div>
+    <div class="wstrip-pills"><span class="pill ps1">4 disparos</span><span class="pill pgold">Kits Dia das Mães</span><span class="pill pgray">SEDEX Sul/SE</span></div>
+    <div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div>
+    <div class="progress-lbl"><span>Progresso</span><span>0/4</span></div>
+  </div>
+  <div class="wstrip">
+    <div class="wstrip-banner">
+      <div class="wstrip-line" style="background:var(--s2)"></div>
+      <div><div class="wstrip-title">Semana 2 · 11 a 15/05 · Reativação</div><div class="wstrip-sub">2 disparos. E-mail de saudade para inativos + reforço para quem não abriu.</div></div>
+    </div>
+    <div class="wstrip-pills"><span class="pill ps2">2 disparos</span><span class="pill pgray">Inativos 60–180d</span></div>
+    <div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div>
+    <div class="progress-lbl"><span>Progresso</span><span>0/2</span></div>
+  </div>
+  <div class="wstrip">
+    <div class="wstrip-banner">
+      <div class="wstrip-line" style="background:var(--s3a)"></div>
+      <div><div class="wstrip-title">Semana 3A · 17 a 19/05 · PIX Day</div><div class="wstrip-sub">2 disparos. Abertura da campanha PIX e last call para não convertidos.</div></div>
+    </div>
+    <div class="wstrip-pills"><span class="pill ps3a">2 disparos</span><span class="pill pgold">PIX = D+0</span></div>
+    <div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div>
+    <div class="progress-lbl"><span>Progresso</span><span>0/2</span></div>
+  </div>
+  <div class="wstrip">
+    <div class="wstrip-banner">
+      <div class="wstrip-line" style="background:var(--s3b)"></div>
+      <div><div class="wstrip-title">Semana 3B · 22 a 25/05 · Kits Blusas</div><div class="wstrip-sub">2 disparos. Lançamento para toda a base + produto foco para quem abriu o primeiro.</div></div>
+    </div>
+    <div class="wstrip-pills"><span class="pill ps3b">2 disparos</span><span class="pill pgray">Lançamento inédito</span></div>
+    <div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div>
+    <div class="progress-lbl"><span>Progresso</span><span>0/2</span></div>
+  </div>
+  <div class="wstrip">
+    <div class="wstrip-banner">
+      <div class="wstrip-line" style="background:var(--s4)"></div>
+      <div><div class="wstrip-title">Semana 4 · 26 a 27/05 · Kits de Calças</div><div class="wstrip-sub">2 disparos. Abertura da campanha e last call no último dia (27/05).</div></div>
+    </div>
+    <div class="wstrip-pills"><span class="pill ps4">2 disparos</span><span class="pill pgray">Encerra 27/05</span></div>
+    <div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div>
+    <div class="progress-lbl"><span>Progresso</span><span>0/2</span></div>
+  </div>
+
+</div>
+
+<!-- ═══════ S1 ═══════ -->
+<div id="panel-s1" class="panel">
+
+  <div class="intro-card" style="border-top-color:var(--s1)">
+    <div class="intro-title">Semana 1 · 01 a 09/05 · Dia das Mães · 4 disparos</div>
+    <div class="intro-body"><strong>Produto central:</strong> Kit 1 (Regata Linho Decote V + Calça Reta Barra Italiana) e Kit 2 (Canelada Regata com Gola + Calça Jogger Linho). Todos os kits incluem <strong>frete grátis</strong> e <strong>sacola de presente</strong>. O disparo 03 é segmentado por CEP — requer configuração de geo-segmentação na Edrone antes de 06/05.</div>
+  </div>
+
+  <!-- E-MAIL 01 -->
+  <div class="sec"><div class="sec-bar" style="background:var(--s1)"></div><span class="sec-label">Disparo 01 de 04</span><span class="badge" style="background:var(--s1-bg);color:var(--s1);border:1px solid var(--s1-mid)">01/05 · 8h</span></div>
+
+  <div class="email-card">
+    <div class="email-header" onclick="tog(this)">
+      <div class="email-check" onclick="chk(this,event)"></div>
+      <div class="email-info">
+        <div class="email-meta"><span class="tbadge">01/05 · 8h</span> <span class="pill ps1">Comercial</span> <span class="pill pgold">Abertura S1</span></div>
+        <div class="email-title">Lançamento dos Kits Dia das Mães — abertura da campanha</div>
+        <div class="email-pills"><span class="pill ps1">Base engajada</span><span class="pill pgray">Abertura matinal</span></div>
+      </div>
+      <div class="email-arrow">▼</div>
+    </div>
+    <div class="email-body">
+      <div class="eb-grid">
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">👥</span>Segmento</div>
+          <div class="seg-block"><strong>Base engajada:</strong> clientes que abriram ao menos 1 e-mail nos últimos 90 dias OU compraram nos últimos 90 dias. Excluir quem está em fluxo de carrinho abandonado ativo.</div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">📩</span>Assuntos A/B — testar qual tem maior abertura</div>
+          <div class="subj-block">
+            <div class="subj-label"><span class="ab-var va">A</span>Benefício + emoção</div>
+            <div class="subj-text">Presente que ela vai usar todo dia — não só no domingo</div>
+            <div class="subj-pre">Preheader: Kit Dia das Mães chegou. Linho, sacola de presente e frete grátis. 🌸</div>
+          </div>
+          <div class="subj-block">
+            <div class="subj-label"><span class="ab-var vb">B</span>Novidade + benefício explícito</div>
+            <div class="subj-text">Kit Dia das Mães chegou (e tem sacola grátis)</div>
+            <div class="subj-pre">Preheader: Dois kits em linho, frete incluso e embalagem especial para presentear.</div>
+          </div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">📋</span>Briefing de conteúdo</div>
+          <div class="eb-content">
+            <ul>
+              <li><strong>Hero:</strong> Imagem dos dois kits lado a lado, preferencialmente com a sacola de presente visível</li>
+              <li><strong>Headline:</strong> "O presente que ela vai usar todo dia"</li>
+              <li><strong>Corpo:</strong> Apresentar Kit 1 (Regata V + Reta Barra Italiana) e Kit 2 (Canelada Gola + Jogger Linho) — cada um com foto, nome das peças e benefício do conjunto</li>
+              <li><strong>Destaque:</strong> Sacola de presente inclusa + Frete grátis para todo o Brasil — esses dois benefícios devem estar visualmente destacados no e-mail, não apenas no corpo do texto</li>
+              <li><strong>CTA:</strong> Botão separado para cada kit — "Ver Kit 1" e "Ver Kit 2" — links a confirmar com a equipe</li>
+            </ul>
+          </div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">🎯</span>CTA principal</div>
+          <div class="copy-block">Botão: "Quero garantir meu kit" → URL do kit (confirmar link com equipe antes de agendar)</div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">⚠️</span>Checklist antes de agendar</div>
+          <div class="eb-content">
+            <ul>
+              <li>URLs dos kits cadastradas no Shoppub e funcionando</li>
+              <li>Segmento criado na Edrone (engajados 90d)</li>
+              <li>Teste de renderização em mobile e desktop</li>
+              <li>A/B configurado com divisão 50/50</li>
+              <li>Preheader cadastrado (campo separado do assunto na Edrone)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- E-MAIL 02 -->
+  <div class="sec"><div class="sec-bar" style="background:var(--s1)"></div><span class="sec-label">Disparo 02 de 04</span><span class="badge" style="background:var(--s1-bg);color:var(--s1);border:1px solid var(--s1-mid)">05/05 · 19h</span></div>
+
+  <div class="email-card">
+    <div class="email-header" onclick="tog(this)">
+      <div class="email-check" onclick="chk(this,event)"></div>
+      <div class="email-info">
+        <div class="email-meta"><span class="tbadge">05/05 · 19h</span> <span class="pill ps1">Reforço</span></div>
+        <div class="email-title">Reforço para quem não abriu o e-mail de 01/05</div>
+        <div class="email-pills"><span class="pill pred">Não abriu e-mail 01</span></div>
+      </div>
+      <div class="email-arrow">▼</div>
+    </div>
+    <div class="email-body">
+      <div class="eb-grid">
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">👥</span>Segmento</div>
+          <div class="seg-block"><strong>Automático via Edrone:</strong> quem recebeu o e-mail 01 (01/05) e não abriu até às 18h do dia 05/05. Esse segmento é gerado automaticamente se a campanha anterior foi configurada com tag de rastreamento.</div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">📩</span>Assuntos A/B</div>
+          <div class="subj-block">
+            <div class="subj-label"><span class="ab-var va">A</span>Curiosidade</div>
+            <div class="subj-text">Você viu o que tem de novo aqui?</div>
+            <div class="subj-pre">Preheader: Kits Dia das Mães com sacola de presente e frete grátis. Chegou.</div>
+          </div>
+          <div class="subj-block">
+            <div class="subj-label"><span class="ab-var vb">B</span>Benefício explícito</div>
+            <div class="subj-text">Frete grátis + sacola grátis — kit Dia das Mães</div>
+            <div class="subj-pre">Preheader: Dois kits em linho pensados para ela — e tudo incluso.</div>
+          </div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">📋</span>Briefing</div>
+          <div class="eb-content">
+            Pode reaproveitar o layout do e-mail 01 com <strong>pequenas variações visuais</strong> para não parecer idêntico. Alterar a headline, trocar a ordem das imagens ou usar uma foto diferente dos kits. O conteúdo central é o mesmo — kits, sacola, frete grátis.
+          </div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">🎯</span>CTA</div>
+          <div class="copy-block">Manter CTAs separados por kit. Adicionar urgência: "Pedidos realizados até 09/05 chegam a tempo".</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- E-MAIL 03 -->
+  <div class="sec"><div class="sec-bar" style="background:var(--s1)"></div><span class="sec-label">Disparo 03 de 04</span><span class="badge" style="background:#FEECEC;color:#B52C1E;border:1px solid #F4BFBB">06/05 · 8h — SEDEX Grátis</span></div>
+
+  <div class="email-card">
+    <div class="email-header" onclick="tog(this)">
+      <div class="email-check" onclick="chk(this,event)"></div>
+      <div class="email-info">
+        <div class="email-meta"><span class="tbadge">06/05 · 8h</span> <span class="pill pred">Urgência logística</span> <span class="pill pgray">Geo: Sul/SE</span></div>
+        <div class="email-title">SEDEX Grátis — pedido chega antes do Dia das Mães (Sul e Sudeste)</div>
+        <div class="email-pills"><span class="pill pred">Segmento por CEP — Sul e Sudeste</span></div>
+      </div>
+      <div class="email-arrow">▼</div>
+    </div>
+    <div class="email-body">
+      <div class="eb-grid">
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">👥</span>Segmento — ATENÇÃO</div>
+          <div class="seg-block"><strong>Geo-segmentação por CEP:</strong> clientes com endereço cadastrado nos estados SP, RJ, MG, ES, PR, SC, RS. Verificar se a Edrone permite filtro por estado de entrega ou CEP. Se não for possível disparar segmentado, disparar para toda a base com a chamada "Se você mora no Sul ou Sudeste". <strong>Validar a disponibilidade desse filtro com o time antes de 05/05.</strong></div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">📩</span>Assuntos A/B</div>
+          <div class="subj-block">
+            <div class="subj-label"><span class="ab-var va">A</span>Urgência + benefício logístico</div>
+            <div class="subj-text">Sedex grátis — pedido chega antes do domingo</div>
+            <div class="subj-pre">Preheader: Sul e Sudeste: Sedex por nossa conta até sexta. Garanta o kit agora.</div>
+          </div>
+          <div class="subj-block">
+            <div class="subj-label"><span class="ab-var vb">B</span>Pergunta + benefício</div>
+            <div class="subj-text">Mora no Sul ou Sudeste? Veja o que a gente preparou</div>
+            <div class="subj-pre">Preheader: Sedex grátis para sua região — Kit Dia das Mães chega a tempo.</div>
+          </div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">📋</span>Briefing de conteúdo</div>
+          <div class="eb-content">
+            <ul>
+              <li><strong>Hero:</strong> Visual de urgência logística — pode ser ícone de entrega + data confirmada</li>
+              <li><strong>Headline:</strong> "Ainda dá tempo de receber antes do Dia das Mães"</li>
+              <li><strong>Corpo:</strong> Mencionar que o SEDEX é grátis para compras realizadas até 08/05. Incluir tabela ou lista com prazo estimado por estado (confirmar prazos reais com a equipe de operações)</li>
+              <li><strong>Destaque:</strong> SEDEX Grátis válido <strong>somente de 06 a 08/05</strong>. Esse prazo deve aparecer claramente.</li>
+              <li><strong>CTA:</strong> "Garantir com Sedex Grátis" — link para os kits</li>
+            </ul>
+            <br>
+            <strong>⚠️ Confirmar com operações:</strong> prazo de entrega real por estado para pedidos realizados em 06, 07 e 08/05. Não publicar prazo estimado sem confirmação.
+          </div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">🎯</span>CTA</div>
+          <div class="copy-block">Botão: "Garantir com Sedex Grátis" — urgência de prazo, não de preço.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- E-MAIL 04 -->
+  <div class="sec"><div class="sec-bar" style="background:var(--s1)"></div><span class="sec-label">Disparo 04 de 04</span><span class="badge" style="background:#FEECEC;color:#B52C1E;border:1px solid #F4BFBB">09/05 · 8h — LAST CALL</span></div>
+
+  <div class="email-card">
+    <div class="email-header" onclick="tog(this)">
+      <div class="email-check" onclick="chk(this,event)"></div>
+      <div class="email-info">
+        <div class="email-meta"><span class="tbadge">09/05 · 8h</span> <span class="pill pred">Last Call</span></div>
+        <div class="email-title">Última chance — encerramento da campanha Dia das Mães</div>
+        <div class="email-pills"><span class="pill pred">Não convertidos S1 (recebeu mas não comprou)</span></div>
+      </div>
+      <div class="email-arrow">▼</div>
+    </div>
+    <div class="email-body">
+      <div class="eb-grid">
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">👥</span>Segmento</div>
+          <div class="seg-block"><strong>Recebeu qualquer e-mail da S1 (disparos 01, 02 ou 03) mas não clicou nem converteu</strong> até 08/05. Excluir quem já comprou na semana.</div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">📩</span>Assuntos A/B</div>
+          <div class="subj-block">
+            <div class="subj-label"><span class="ab-var va">A</span>Urgência direta</div>
+            <div class="subj-text">Última chance — meia-noite fecha o kit</div>
+            <div class="subj-pre">Preheader: Hoje é o último dia com sacola de presente e frete grátis. PIX confirma na hora.</div>
+          </div>
+          <div class="subj-block">
+            <div class="subj-label"><span class="ab-var vb">B</span>Urgência simples</div>
+            <div class="subj-text">Hoje é o último dia. Sério.</div>
+            <div class="subj-pre">Preheader: Kit Dia das Mães com sacola e frete grátis — encerra hoje à meia-noite.</div>
+          </div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">📋</span>Briefing</div>
+          <div class="eb-content">
+            <ul>
+              <li>Design mais enxuto que os anteriores — foco máximo no CTA</li>
+              <li>Mencionar que o PIX confirma imediatamente (compra feita hoje, confirmação na hora)</li>
+              <li>Prazo: "Pedidos com PIX até hoje garantem entrega mais rápida"</li>
+              <li>Não precisar repetir toda a descrição dos kits — apenas a imagem principal e os benefícios chave</li>
+            </ul>
+          </div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">🎯</span>CTA</div>
+          <div class="copy-block">Botão: "Confirma em segundos" — destaque para velocidade do PIX.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════ S2 ═══════ -->
+<div id="panel-s2" class="panel">
+
+  <div class="intro-card" style="border-top-color:var(--s2)">
+    <div class="intro-title">Semana 2 · 11 a 15/05 · Reativação · 2 disparos</div>
+    <div class="intro-body"><strong>Público:</strong> clientes inativos há 60 a 180 dias. O e-mail 05 é de reengajamento — tom de saudade, sem pressão. O e-mail 06 é enviado apenas para quem não abriu o anterior e revela o benefício de forma direta. <strong>Nenhum dos dois deve parecer uma oferta agressiva.</strong></div>
+  </div>
+
+  <div class="notice">O frete grátis desta semana é <strong>sem valor mínimo de compra</strong> — esse diferencial deve aparecer com destaque em ambos os e-mails. É o principal motivador de retorno para quem está inativo.</div>
+
+  <!-- E-MAIL 05 -->
+  <div class="sec"><div class="sec-bar" style="background:var(--s2)"></div><span class="sec-label">Disparo 05 de 02</span><span class="badge" style="background:var(--s2-bg);color:var(--s2);border:1px solid var(--s2-mid)">11/05 · 19h</span></div>
+
+  <div class="email-card">
+    <div class="email-header" onclick="tog(this)">
+      <div class="email-check" onclick="chk(this,event)"></div>
+      <div class="email-info">
+        <div class="email-meta"><span class="tbadge">11/05 · 19h</span> <span class="pill ps2">Reativação D0</span></div>
+        <div class="email-title">"A Villa sentiu sua falta" — primeiro contato de reengajamento</div>
+        <div class="email-pills"><span class="pill ps2">Inativos 60–180d</span><span class="pill pgray">Tom acolhedor</span></div>
+      </div>
+      <div class="email-arrow">▼</div>
+    </div>
+    <div class="email-body">
+      <div class="eb-grid">
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">👥</span>Segmento</div>
+          <div class="seg-block"><strong>Clientes com última compra entre 60 e 180 dias atrás.</strong> Prioridade: 60–120 dias (maior chance de resposta). Excluir quem já comprou nesta semana ou está em automação ativa.</div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">📩</span>Assuntos A/B</div>
+          <div class="subj-block">
+            <div class="subj-label"><span class="ab-var va">A</span>Emocional + saudade</div>
+            <div class="subj-text">A Villa sentiu sua falta 🌿</div>
+            <div class="subj-pre">Preheader: Tem novidades esperando por você — e frete grátis sem mínimo essa semana.</div>
+          </div>
+          <div class="subj-block">
+            <div class="subj-label"><span class="ab-var vb">B</span>Personalizado + curiosidade</div>
+            <div class="subj-text">Oi [nome], você ainda por aqui?</div>
+            <div class="subj-pre">Preheader: A gente separou algumas novidades que combinam com você. Vem ver?</div>
+          </div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">📋</span>Briefing de conteúdo</div>
+          <div class="eb-content">
+            <ul>
+              <li><strong>Tom:</strong> Próximo, acolhedor, sem pressão de venda. Não começar com oferta — começar com a relação.</li>
+              <li><strong>Hero:</strong> Imagem de produto novo da coleção (não os kits — já passaram da data)</li>
+              <li><strong>Headline:</strong> "A gente estava com saudade de você"</li>
+              <li><strong>Corpo:</strong> 2–3 novidades da coleção atual. Mencionar no final: "E essa semana o frete é por nossa conta — sem valor mínimo."</li>
+              <li><strong>Frete grátis:</strong> Aparece como bonificação, não como gatilho principal neste e-mail</li>
+              <li><strong>CTA:</strong> Suave — "Ver novidades" ou "Voltar a explorar"</li>
+            </ul>
+          </div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">🎯</span>CTA</div>
+          <div class="copy-block">Botão: "Ver o que chegou" — link para a coleção atual ou página de novidades.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- E-MAIL 06 -->
+  <div class="sec"><div class="sec-bar" style="background:var(--s2)"></div><span class="sec-label">Disparo 06 de 02</span><span class="badge" style="background:var(--s2-bg);color:var(--s2);border:1px solid var(--s2-mid)">14/05 · 19h</span></div>
+
+  <div class="email-card">
+    <div class="email-header" onclick="tog(this)">
+      <div class="email-check" onclick="chk(this,event)"></div>
+      <div class="email-info">
+        <div class="email-meta"><span class="tbadge">14/05 · 19h</span> <span class="pill ps2">Reativação D3</span></div>
+        <div class="email-title">Reforço com benefício direto — frete grátis sem mínimo</div>
+        <div class="email-pills"><span class="pill pred">Não abriu e-mail 05</span></div>
+      </div>
+      <div class="email-arrow">▼</div>
+    </div>
+    <div class="email-body">
+      <div class="eb-grid">
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">👥</span>Segmento</div>
+          <div class="seg-block"><strong>Quem recebeu o e-mail 05 (11/05) e não abriu até 14/05.</strong> Excluir quem já comprou após o e-mail 05.</div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">📩</span>Assuntos A/B</div>
+          <div class="subj-block">
+            <div class="subj-label"><span class="ab-var va">A</span>Benefício + prazo</div>
+            <div class="subj-text">Frete grátis sem mínimo — só até amanhã</div>
+            <div class="subj-pre">Preheader: Qualquer peça, qualquer valor, frete por nossa conta até sexta.</div>
+          </div>
+          <div class="subj-block">
+            <div class="subj-label"><span class="ab-var vb">B</span>Personalizado + urgência</div>
+            <div class="subj-text">Você não viu isso ainda, [nome]</div>
+            <div class="subj-pre">Preheader: Frete grátis sem valor mínimo — encerra amanhã. Só essa semana.</div>
+          </div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">📋</span>Briefing</div>
+          <div class="eb-content">
+            Neste e-mail o <strong>frete grátis sem mínimo é o hero</strong> — não mais apenas a menção. Design deve ter o benefício em destaque visual. Produto em destaque: escolher 1 peça da coleção que seja bestseller ou mais visitada. Urgência: "encerra amanhã".
+          </div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">🎯</span>CTA</div>
+          <div class="copy-block">Botão: "Comprar com frete grátis" — direto para a loja ou categoria principal.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════ S3A ═══════ -->
+<div id="panel-s3a" class="panel">
+
+  <div class="intro-card" style="border-top-color:var(--s3a)">
+    <div class="intro-title">Semana 3A · 17 a 19/05 · PIX Day · 2 disparos</div>
+    <div class="intro-body">Campanha de 3 dias com condição exclusiva para pagamento via PIX. Os dois e-mails desta semana são diretos e de alta urgência. <strong>Destacar em todos que PIX = confirmação imediata (D+0).</strong> O conteúdo da condição especial (qual o benefício do PIX Day) deve ser confirmado com a equipe antes de agendar o e-mail 07.</div>
+  </div>
+
+  <!-- E-MAIL 07 -->
+  <div class="sec"><div class="sec-bar" style="background:var(--s3a)"></div><span class="sec-label">Disparo 07 de 02</span><span class="badge" style="background:var(--s3a-bg);color:var(--s3a);border:1px solid var(--s3a-mid)">17/05 · 8h</span></div>
+
+  <div class="email-card">
+    <div class="email-header" onclick="tog(this)">
+      <div class="email-check" onclick="chk(this,event)"></div>
+      <div class="email-info">
+        <div class="email-meta"><span class="tbadge">17/05 · 8h</span> <span class="pill ps3a">PIX Day — Abertura</span></div>
+        <div class="email-title">Abertura do PIX Day — condição exclusiva por 3 dias</div>
+        <div class="email-pills"><span class="pill ps3a">Base ativa (comprou nos últimos 90d)</span></div>
+      </div>
+      <div class="email-arrow">▼</div>
+    </div>
+    <div class="email-body">
+      <div class="eb-grid">
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">👥</span>Segmento</div>
+          <div class="seg-block"><strong>Compradores ativos dos últimos 90 dias</strong> que ainda não estão em nenhum fluxo de campanha ativo. Excluir quem está em reativação S2.</div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">📩</span>Assuntos A/B</div>
+          <div class="subj-block">
+            <div class="subj-label"><span class="ab-var va">A</span>Evento + urgência</div>
+            <div class="subj-text">Dia do PIX — condição exclusiva aberta</div>
+            <div class="subj-pre">Preheader: Por 3 dias, quem paga com PIX tem uma vantagem especial. Começa hoje.</div>
+          </div>
+          <div class="subj-block">
+            <div class="subj-label"><span class="ab-var vb">B</span>Benefício + prazo</div>
+            <div class="subj-text">PIX hoje = [benefício] — só por 3 dias</div>
+            <div class="subj-pre">Preheader: Condição exclusiva para pagamento via PIX. Confirma na hora, entrega mais rápida.</div>
+          </div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">⚠️</span>Antes de agendar</div>
+          <div class="eb-content">
+            <strong>Confirmar com a equipe:</strong> qual é a condição especial do PIX Day (ex: frete grátis para PIX, % de desconto exclusivo, brinde). O assunto B usa "[benefício]" como placeholder — substituir pelo benefício real antes de agendar.
+          </div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">📋</span>Briefing de conteúdo</div>
+          <div class="eb-content">
+            <ul>
+              <li><strong>Hero:</strong> Arte com identidade PIX Day — pode usar a cor do PIX (verde) como referência visual</li>
+              <li><strong>Headline:</strong> "PIX Day — 3 dias de condição exclusiva"</li>
+              <li><strong>Corpo:</strong> Explicar a mecânica de forma clara: o que é o benefício, como usar (pagar com PIX no checkout), quando encerra (19/05 à meia-noite)</li>
+              <li><strong>Destaque:</strong> PIX = confirmação imediata. Pagou agora, pedido confirmado na hora.</li>
+              <li><strong>Produto âncora:</strong> Destacar 1 ou 2 produtos que estejam com o benefício ou sejam bestsellers</li>
+            </ul>
+          </div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">🎯</span>CTA</div>
+          <div class="copy-block">Botão: "Pagar com PIX" — link direto para a loja ou LP da campanha, se houver.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- E-MAIL 08 -->
+  <div class="sec"><div class="sec-bar" style="background:var(--s3a)"></div><span class="sec-label">Disparo 08 de 02</span><span class="badge" style="background:#FEECEC;color:#B52C1E;border:1px solid #F4BFBB">19/05 · 12h — LAST CALL</span></div>
+
+  <div class="email-card">
+    <div class="email-header" onclick="tog(this)">
+      <div class="email-check" onclick="chk(this,event)"></div>
+      <div class="email-info">
+        <div class="email-meta"><span class="tbadge">19/05 · 12h</span> <span class="pill pred">Last Call PIX Day</span></div>
+        <div class="email-title">Último dia do PIX Day — encerra hoje à meia-noite</div>
+        <div class="email-pills"><span class="pill pred">Recebeu e-mail 07 mas não converteu</span></div>
+      </div>
+      <div class="email-arrow">▼</div>
+    </div>
+    <div class="email-body">
+      <div class="eb-grid">
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">👥</span>Segmento</div>
+          <div class="seg-block"><strong>Quem recebeu o e-mail 07 mas não clicou ou não converteu até a manhã de 19/05.</strong> Excluir quem já comprou com PIX.</div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">📩</span>Assuntos A/B</div>
+          <div class="subj-block">
+            <div class="subj-label"><span class="ab-var va">A</span>Urgência direta</div>
+            <div class="subj-text">Hoje é o último dia do PIX Day</div>
+            <div class="subj-pre">Preheader: Encerra meia-noite. Condição exclusiva para PIX — só hoje.</div>
+          </div>
+          <div class="subj-block">
+            <div class="subj-label"><span class="ab-var vb">B</span>Personalizado + urgência</div>
+            <div class="subj-text">Encerra meia-noite — [nome], você ainda vai a tempo</div>
+            <div class="subj-pre">Preheader: PIX confirma na hora. Compra agora, pedido garantido imediatamente.</div>
+          </div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">📋</span>Briefing</div>
+          <div class="eb-content">E-mail enxuto, de urgência máxima. Apenas o benefício do PIX Day, o prazo (encerra hoje à meia-noite) e o CTA. Sem blocos de conteúdo extenso. Pode usar um timer visual se a plataforma suportar (gif ou módulo de countdown). Disparar ao meio-dia para capturar a decisão da tarde.</div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">🎯</span>CTA</div>
+          <div class="copy-block">Botão: "Comprar com PIX agora" — link direto para a loja. Destacar que o valor cai imediatamente.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════ S3B ═══════ -->
+<div id="panel-s3b" class="panel">
+
+  <div class="intro-card" style="border-top-color:var(--s3b)">
+    <div class="intro-title">Semana 3B · 22 a 25/05 · Kits Blusas · 2 disparos</div>
+    <div class="intro-body">Primeiro lançamento de kits de blusas da Villa Veneza. O e-mail 09 é o lançamento oficial — deve ser enviado <strong>após a revelação nas redes sociais em 21/05</strong>. O e-mail 10 é direcionado apenas para quem demonstrou interesse abrindo o anterior, aprofundando o produto.</div>
+  </div>
+
+  <div class="notice alert"><strong>Atenção:</strong> Os Kits Blusas ainda não foram revelados antes de 21/05. O e-mail 09 deve ser agendado para 22/05 — nunca antes disso. Confirmar que o produto já está cadastrado e disponível no Shoppub antes de agendar.</div>
+
+  <!-- E-MAIL 09 -->
+  <div class="sec"><div class="sec-bar" style="background:var(--s3b)"></div><span class="sec-label">Disparo 09 de 02</span><span class="badge" style="background:var(--s3b-bg);color:var(--s3b);border:1px solid var(--s3b-mid)">22/05 · 9h</span></div>
+
+  <div class="email-card">
+    <div class="email-header" onclick="tog(this)">
+      <div class="email-check" onclick="chk(this,event)"></div>
+      <div class="email-info">
+        <div class="email-meta"><span class="tbadge">22/05 · 9h</span> <span class="pill ps3b">Lançamento</span></div>
+        <div class="email-title">Lançamento dos Kits Blusas — "nunca tivemos isso antes"</div>
+        <div class="email-pills"><span class="pill ps3b">Base engajada + ativos 90d</span></div>
+      </div>
+      <div class="email-arrow">▼</div>
+    </div>
+    <div class="email-body">
+      <div class="eb-grid">
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">👥</span>Segmento</div>
+          <div class="seg-block"><strong>Base engajada (abriu e-mail nos últimos 90d) + compradores ativos nos últimos 90d.</strong> Não é necessário segmentar por produto anterior — este é um lançamento de novidade para toda a base ativa.</div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">📩</span>Assuntos A/B</div>
+          <div class="subj-block">
+            <div class="subj-label"><span class="ab-var va">A</span>Exclusividade + novidade</div>
+            <div class="subj-text">Chegou uma novidade exclusiva Villa Veneza</div>
+            <div class="subj-pre">Preheader: Nunca tínhamos feito isso antes — Kits de Blusas exclusivos chegaram.</div>
+          </div>
+          <div class="subj-block">
+            <div class="subj-label"><span class="ab-var vb">B</span>Inédito + produto direto</div>
+            <div class="subj-text">Nunca tivemos isso antes: Kit Blusas VV</div>
+            <div class="subj-pre">Preheader: Duas peças com cara de coleção, preço de kit. Primeiro lançamento do tipo aqui.</div>
+          </div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">📋</span>Briefing de conteúdo</div>
+          <div class="eb-content">
+            <ul>
+              <li><strong>Tom:</strong> Lançamento. Energia de novidade. "Nunca tínhamos feito isso antes na Villa Veneza."</li>
+              <li><strong>Hero:</strong> Imagem dos Kits Blusas — os melhores visuais disponíveis. Esse é o primeiro e-mail do produto.</li>
+              <li><strong>Headline:</strong> "Os primeiros Kits de Blusas exclusivos da Villa Veneza chegaram"</li>
+              <li><strong>Corpo:</strong> Apresentar os modelos disponíveis. Destacar que são kits exclusivos — não vendidos separadamente da mesma forma.</li>
+              <li><strong>CTA:</strong> "Conhecer os kits" — link para a página dos Kits Blusas</li>
+            </ul>
+          </div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">🎯</span>CTA</div>
+          <div class="copy-block">Botão: "Conhecer os Kits Blusas" — link para a coleção ou página de produto dos kits.</div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">⚠️</span>Checklist antes de agendar</div>
+          <div class="eb-content">
+            <ul>
+              <li>Kits Blusas revelados nas redes sociais em 21/05 — confirmar antes de disparar</li>
+              <li>URL do produto ativa no Shoppub</li>
+              <li>Fotos do produto disponíveis e aprovadas para e-mail</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- E-MAIL 10 -->
+  <div class="sec"><div class="sec-bar" style="background:var(--s3b)"></div><span class="sec-label">Disparo 10 de 02</span><span class="badge" style="background:var(--s3b-bg);color:var(--s3b);border:1px solid var(--s3b-mid)">24/05 · 19h</span></div>
+
+  <div class="email-card">
+    <div class="email-header" onclick="tog(this)">
+      <div class="email-check" onclick="chk(this,event)"></div>
+      <div class="email-info">
+        <div class="email-meta"><span class="tbadge">24/05 · 19h</span> <span class="pill ps3b">Produto Foco</span></div>
+        <div class="email-title">"Já escolheu o seu kit de blusa?" — aprofundamento para quem demonstrou interesse</div>
+        <div class="email-pills"><span class="pill ps3b">Abriu e-mail 09 mas não converteu</span></div>
+      </div>
+      <div class="email-arrow">▼</div>
+    </div>
+    <div class="email-body">
+      <div class="eb-grid">
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">👥</span>Segmento</div>
+          <div class="seg-block"><strong>Quem abriu o e-mail 09 (lançamento de 22/05) mas não clicou ou não converteu.</strong> Este segmento demonstrou interesse implícito ao abrir — precisa de um argumento a mais para converter.</div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">📩</span>Assuntos A/B</div>
+          <div class="subj-block">
+            <div class="subj-label"><span class="ab-var va">A</span>Pergunta direta</div>
+            <div class="subj-text">Já escolheu o seu kit de blusa?</div>
+            <div class="subj-pre">Preheader: Veja as combinações disponíveis — e o que as clientes que já compraram estão falando.</div>
+          </div>
+          <div class="subj-block">
+            <div class="subj-label"><span class="ab-var vb">B</span>Prova social</div>
+            <div class="subj-text">Quem viu adorou — vem ver os kits</div>
+            <div class="subj-pre">Preheader: Os Kits Blusas exclusivos VV estão fazendo sucesso. Já escolheu o seu?</div>
+          </div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">📋</span>Briefing</div>
+          <div class="eb-content">
+            E-mail focado em <strong>quebra de objeção e prova social</strong>. Incluir depoimentos ou prints de clientes que já compraram os kits (se disponível até 24/05). Mostrar as combinações dos kits em situações de uso. Tom: "você viu, gostou, o que falta para garantir o seu?"
+          </div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">🎯</span>CTA</div>
+          <div class="copy-block">Botão: "Garantir meu kit" — link direto para a página dos Kits Blusas.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════ S4 ═══════ -->
+<div id="panel-s4" class="panel">
+
+  <div class="intro-card" style="border-top-color:var(--s4)">
+    <div class="intro-title">Semana 4 · 26 a 27/05 · Kits de Calças · 2 disparos</div>
+    <div class="intro-body">Kits de calças selecionados com condição especial de fechamento de mês. Campanha curta — <strong>abre em 26/05 e encerra em 27/05</strong>. O tom em ambos os e-mails é de <strong>"kit curado"</strong>, nunca de liquidação ou promoção. Confirmar quais kits específicos estarão disponíveis e com qual condição antes de agendar.</div>
+  </div>
+
+  <div class="notice alert"><strong>Tom obrigatório:</strong> Nunca usar "liquidação", "promoção", "queima" ou "oferta" nesta campanha. Usar sempre: <strong>kit curado</strong>, <strong>condição especial de fechamento</strong>, <strong>combinação selecionada</strong>.</div>
+
+  <!-- E-MAIL 11 -->
+  <div class="sec"><div class="sec-bar" style="background:var(--s4)"></div><span class="sec-label">Disparo 11 de 02</span><span class="badge" style="background:var(--s4-bg);color:var(--s4);border:1px solid var(--s4-mid)">26/05 · 8h</span></div>
+
+  <div class="email-card">
+    <div class="email-header" onclick="tog(this)">
+      <div class="email-check" onclick="chk(this,event)"></div>
+      <div class="email-info">
+        <div class="email-meta"><span class="tbadge">26/05 · 8h</span> <span class="pill ps4">Comercial — Abertura</span></div>
+        <div class="email-title">Kits de Calças — condição especial de fechamento de mês</div>
+        <div class="email-pills"><span class="pill ps4">Base engajada + compradores de calças</span></div>
+      </div>
+      <div class="email-arrow">▼</div>
+    </div>
+    <div class="email-body">
+      <div class="eb-grid">
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">👥</span>Segmento</div>
+          <div class="seg-block"><strong>Base engajada (últimos 90d) + preferencialmente clientes que já compraram calças anteriormente</strong> (filtro por SKU ou categoria, se disponível na Edrone). Se não for possível o filtro de histórico de produto, disparar para toda a base engajada.</div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">📩</span>Assuntos A/B</div>
+          <div class="subj-block">
+            <div class="subj-label"><span class="ab-var va">A</span>Curadoria + condição</div>
+            <div class="subj-text">Kit de calças com condição especial — kits curados</div>
+            <div class="subj-pre">Preheader: Combinações selecionadas de calças. Condição especial só até 27/05.</div>
+          </div>
+          <div class="subj-block">
+            <div class="subj-label"><span class="ab-var vb">B</span>Benefício direto</div>
+            <div class="subj-text">Duas calças que combinam — e custam menos juntas</div>
+            <div class="subj-pre">Preheader: Kits de calças curados — combinações pensadas, condição de fechamento de mês.</div>
+          </div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">📋</span>Briefing de conteúdo</div>
+          <div class="eb-content">
+            <ul>
+              <li><strong>Hero:</strong> Imagem dos kits disponíveis — cada kit é um par de calças que combinam</li>
+              <li><strong>Headline:</strong> "Kit curado — duas calças, uma condição especial de fechamento"</li>
+              <li><strong>Corpo:</strong> Apresentar cada kit disponível com as peças e as combinações possíveis. Mencionar a condição especial (confirmar a informação exata com a equipe)</li>
+              <li><strong>Urgência:</strong> "Disponível somente até 27/05"</li>
+              <li><strong>Proibido usar:</strong> liquidação, promoção, queima, desconto agressivo, saldão</li>
+            </ul>
+            <br>
+            <strong>⚠️ Confirmar com a equipe antes de agendar:</strong> quais kits específicos estão disponíveis, qual é a condição especial exata, se há estoque confirmado para todos os tamanhos.
+          </div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">🎯</span>CTA</div>
+          <div class="copy-block">Botão: "Montar meu kit" — link para a página dos kits de calças.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- E-MAIL 12 -->
+  <div class="sec"><div class="sec-bar" style="background:var(--s4)"></div><span class="sec-label">Disparo 12 de 02</span><span class="badge" style="background:#FEECEC;color:#B52C1E;border:1px solid #F4BFBB">27/05 · 8h — ÚLTIMO DIA</span></div>
+
+  <div class="email-card">
+    <div class="email-header" onclick="tog(this)">
+      <div class="email-check" onclick="chk(this,event)"></div>
+      <div class="email-info">
+        <div class="email-meta"><span class="tbadge">27/05 · 8h</span> <span class="pill pred">Last Call</span></div>
+        <div class="email-title">Último dia — condição especial encerra hoje</div>
+        <div class="email-pills"><span class="pill pred">Não convertidos S4 (recebeu e-mail 11 sem comprar)</span></div>
+      </div>
+      <div class="email-arrow">▼</div>
+    </div>
+    <div class="email-body">
+      <div class="eb-grid">
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">👥</span>Segmento</div>
+          <div class="seg-block"><strong>Quem recebeu o e-mail 11 mas não clicou ou comprou até a noite de 26/05.</strong> Excluir quem já converteu.</div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">📩</span>Assuntos A/B</div>
+          <div class="subj-block">
+            <div class="subj-label"><span class="ab-var va">A</span>Urgência direta</div>
+            <div class="subj-text">Hoje é o último dia do kit com condição especial</div>
+            <div class="subj-pre">Preheader: Encerra hoje. Kits de calças curados — depois volta ao preço normal.</div>
+          </div>
+          <div class="subj-block">
+            <div class="subj-label"><span class="ab-var vb">B</span>Personalizado + urgência</div>
+            <div class="subj-text">[Nome], a condição vai embora hoje</div>
+            <div class="subj-pre">Preheader: Último dia dos kits com condição especial de fechamento de mês.</div>
+          </div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">📋</span>Briefing</div>
+          <div class="eb-content">E-mail curto e objetivo. Hero com os kits + urgência de prazo + CTA. Pode incluir a frase: "Depois a condição especial encerra e o preço volta ao normal." Manter o tom de curadoria mesmo na urgência.</div>
+        </div>
+        <div class="eb-item">
+          <div class="eb-label"><span class="eb-icon">🎯</span>CTA</div>
+          <div class="copy-block">Botão: "Última chance — garantir meu kit" — link direto para os kits de calças.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════ REGRAS ═══════ -->
+<div id="panel-regras" class="panel">
+
+  <div class="intro-card">
+    <div class="intro-title">Regras e Padrões de E-mail Marketing</div>
+    <div class="intro-body">Estas regras garantem que os 12 disparos de maio sejam entregues, abertos e clicados da forma correta. Leia antes de começar a configurar qualquer campanha na Edrone.</div>
+  </div>
+
+  <div class="sec"><div class="sec-bar" style="background:var(--gold)"></div><span class="sec-label">Configuração e agendamento</span></div>
+
+  <div class="rule-card"><div class="rule-num">1</div><div><div class="rule-title">A/B obrigatório em todos os 12 disparos</div><div class="rule-body">Todos os disparos do mês devem ter teste A/B de assunto configurado na Edrone com divisão <strong>50/50</strong>. Os assuntos A e B de cada e-mail estão definidos neste documento. Usar o vencedor (maior abertura) como referência para os próximos disparos.</div></div></div>
+
+  <div class="rule-card"><div class="rule-num">2</div><div><div class="rule-title">Preheader — campo obrigatório em todos os e-mails</div><div class="rule-body">O preheader aparece na caixa de entrada logo após o assunto. É o segundo elemento mais importante para a taxa de abertura. <strong>Nunca agendar um e-mail sem preheader preenchido</strong>. Os preheaders de cada disparo estão definidos neste documento junto com os assuntos.</div></div></div>
+
+  <div class="rule-card"><div class="rule-num">3</div><div><div class="rule-title">Segmentos precisam ser criados antes do agendamento</div><div class="rule-body">Cada e-mail tem um segmento específico. Criar e revisar os segmentos na Edrone com pelo menos 2 dias de antecedência. Segmentos que dependem de comportamento de e-mails anteriores (ex: "não abriu o e-mail X") precisam que o e-mail anterior já tenha sido disparado.</div></div></div>
+
+  <div class="rule-card"><div class="rule-num">4</div><div><div class="rule-title">URLs — confirmar antes de agendar</div><div class="rule-body">Toda URL usada nos CTAs deve ser testada antes do agendamento. Produtos novos (kits) precisam estar cadastrados no Shoppub e com URL ativa. <strong>Nunca agendar e-mail com link de produto que ainda não está disponível para compra.</strong></div></div></div>
+
+  <div class="sec"><div class="sec-bar" style="background:var(--gold)"></div><span class="sec-label">Redação e copy</span></div>
+
+  <div class="rule-card"><div class="rule-num">5</div><div><div class="rule-title">Assuntos: 30 a 55 caracteres</div><div class="rule-body">Assuntos acima de 55 caracteres são cortados na maioria dos clientes de e-mail mobile. Contar os caracteres antes de agendar. Usar a regra: <strong>se precisar de mais de 55 caracteres para explicar, o assunto está complicado demais.</strong></div></div></div>
+
+  <div class="rule-card"><div class="rule-num">6</div><div><div class="rule-title">Tom proibido na Semana 4 (Kits Calças)</div><div class="rule-body">Os e-mails 11 e 12 não devem conter as palavras: <strong>liquidação, promoção, queima, saldão, desconto, oferta</strong>. O kit tem condição especial — a comunicação é de curadoria e fechamento, não de promoção. Reler os textos antes de agendar.</div></div></div>
+
+  <div class="rule-card"><div class="rule-num">7</div><div><div class="rule-title">PIX Day — confirmar o benefício antes de escrever</div><div class="rule-body">O e-mail 07 usa "[benefício]" como placeholder. Substituir pela condição exata antes de agendar. <strong>Nunca disparar e-mail com placeholder no assunto ou no corpo.</strong></div></div></div>
+
+  <div class="sec"><div class="sec-bar" style="background:var(--gold)"></div><span class="sec-label">Segmentação e supressão</span></div>
+
+  <div class="rule-card"><div class="rule-num">8</div><div><div class="rule-title">Excluir compradores da campanha de urgência</div><div class="rule-body">Nos e-mails de last call (04, 08, 12), excluir sempre quem já comprou o produto da campanha em questão. Enviar um e-mail de urgência para quem já comprou gera experiência negativa.</div></div></div>
+
+  <div class="rule-card"><div class="rule-num">9</div><div><div class="rule-title">SEDEX grátis — geo-segmentação confirmada com antecedência</div><div class="rule-body">O e-mail 03 requer segmentação por CEP (Sul e Sudeste). Verificar com a equipe se a Edrone permite esse filtro antes de 05/05. Se não for possível, disparar para toda a base com a chamada "Se você mora no Sul ou Sudeste". <strong>Nunca prometer SEDEX grátis para quem não está na região coberta.</strong></div></div></div>
+
+  <div class="rule-card"><div class="rule-num">10</div><div><div class="rule-title">Kits Blusas — não agendar antes de 22/05</div><div class="rule-body">Os Kits Blusas são revelados nas redes sociais em 21/05. O e-mail 09 só deve ser agendado e disparado a partir de 22/05. <strong>Confirmar que o produto está cadastrado e disponível no Shoppub antes de agendar.</strong></div></div></div>
+
+  <div class="sec"><div class="sec-bar" style="background:var(--gold)"></div><span class="sec-label">Monitoramento pós-disparo</span></div>
+
+  <div class="notice">Após cada disparo, registrar as métricas nas primeiras 24h: taxa de abertura, taxa de clique e descadastros. Se a taxa de abertura ficar abaixo de 15%, revisar o assunto para o próximo reforço. Se o CTR ficar abaixo de 1%, revisar o conteúdo e o CTA.</div>
+
+  <div style="overflow-x:auto;border-radius:10px;border:1px solid var(--border);margin-top:.5rem">
+  <table class="check-tbl" style="min-width:480px">
+    <thead><tr><th>Métrica</th><th>Abaixo do esperado</th><th>Saudável</th><th>O que revisar</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Taxa de abertura</strong></td><td>Abaixo de 15%</td><td>20–35%</td><td>Assunto, preheader, horário, segmentação</td></tr>
+      <tr><td><strong>Taxa de clique (CTR)</strong></td><td>Abaixo de 1%</td><td>2–5%</td><td>Conteúdo, CTA, alinhamento assunto × corpo</td></tr>
+      <tr><td><strong>Descadastros</strong></td><td>Acima de 0,5%</td><td>Abaixo de 0,1%</td><td>Frequência, segmentação, relevância do conteúdo</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+</div>
+
+</div><!-- /main -->
+
+<div class="footer">Villa Veneza · Analista de E-mail Marketing · Planejamento Maio 2026 · Documento interno</div>
+
+<script>
+function showTab(id, btn) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('panel-' + id).classList.add('active');
+  btn.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function tog(header) {
+  const body = header.nextElementSibling;
+  const arrow = header.querySelector('.email-arrow');
+  const isOpen = body.classList.contains('open');
+  body.classList.toggle('open', !isOpen);
+  arrow.classList.toggle('open', !isOpen);
+}
+
+function chk(el, event) {
+  event.stopPropagation();
+  el.classList.toggle('checked');
+  const card = el.closest('.email-card');
+  card.style.opacity = el.classList.contains('checked') ? '.5' : '1';
+}
+</script>
+</body>
+</html>
